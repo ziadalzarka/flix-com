@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { getPopularMovies, getPopularTVShows } from "./api/popular";
+import Header from "./components/Header";
+import PopularSection from "./components/PopularSection";
+import SearchResults from "./components/SearchResults";
+import { SearchContainer } from "./container/SearchContainer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <SearchContainer.Provider>
+        <Header></Header>
+        <SearchResults />
+        <PopularSection title="Popular Movies" fetcher={getPopularMovies} />
+        <PopularSection title="Popular TV Shows" fetcher={getPopularTVShows} />
+      </SearchContainer.Provider>
+    </>
   );
 }
 
