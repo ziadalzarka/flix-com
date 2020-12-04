@@ -4,6 +4,8 @@
 
 This is an example project similar to Netflix that consumes TMDB API.
 
+Demo: [https://happy-franklin-8c3751.netlify.app/](https://happy-franklin-8c3751.netlify.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:
