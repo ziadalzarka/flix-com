@@ -1,11 +1,10 @@
 import React from "react";
-import { useQuery } from "react-query";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { getPopularMovies } from "../api/popular";
+import { useQuery } from "react-query";
+import styled from "styled-components";
 import Loading from "./Loading";
 import MediaCard from "./MediaCard";
-import styled from "styled-components";
 
 const SectionTitle = styled.h2`
   color: white;
